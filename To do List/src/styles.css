@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  /* justify-content: center;
+   */
+   text-align: center;
+}
+.add-button{
+  margin-bottom: 1rem;
+}
+
+.add{
+  margin-right: 1rem;
+}

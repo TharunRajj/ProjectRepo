@@ -1,0 +1,12 @@
+.to-do-list{
+  display: flex;
+  color: rgb(255, 0, 0);
+  width: 50rem;
+  margin-left: 50%;
+}
+.to-do-list button{
+  margin-bottom: 1rem;
+}
+.to-do-list li{
+  margin-right:10px ;
+}

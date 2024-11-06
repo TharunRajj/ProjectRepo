@@ -1,0 +1,55 @@
+.app {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.app input {
+  /* display: block; */
+  margin-bottom: 20px;
+  width:60%;
+  height: 50px;
+  margin-left: 5px;
+  box-shadow:0 2px 8px rgba(0, 0, 0, 0.4);
+  border-color: black;
+  border-radius: 4px;
+}
+
+.app label[id="text"]{
+  font-weight: bold;
+  font-size:20px ;
+}
+
+.app button{
+  margin: 0 auto;
+  display: block;
+  height: 35px;
+  background-color:rgb(100, 100, 236);
+  width: 80px;
+  border-radius: 5px;
+  border-color:transparent;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app button:disabled{
+  background-color: grey;
+  color: lightgrey;
+  cursor: default;
+}
+
+  .app button:hover {
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+    font-size: 15px;
+}
+
+.app button:not(:hover){
+  scale: 1;
+  transition: 0.2s ease-in-out;
+}
