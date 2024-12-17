@@ -23,7 +23,6 @@ router.post(
       })
       .isString()
       .trim(),
-    check("imageUrl", "Please enter a valid Image Url").isURL(),
     check("price", "Enter a valid price.").isFloat(),
     check("description", "Description should be minimum 5 characters.")
       .isLength({ min: 8, max: 200 })
@@ -44,7 +43,6 @@ router.post(
       })
       .isString()
       .trim(),
-    check("imageUrl", "Please enter a valid Image Url").isURL(),
     check("price", "Enter a valid price.").isFloat(),
     check("description", "Description should be minimum 5 characters.")
       .isLength({ min: 8, max: 200 })
@@ -54,6 +52,6 @@ router.post(
   adminController.postEditProduct
 );
 
-router.post("/delete-product", isAuth, adminController.postDeleteProduct);
+router.delete("/product/:productId", isAuth, adminController.deleteProduct);
 
 module.exports = router;
