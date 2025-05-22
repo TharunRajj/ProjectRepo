@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const multer = require('multer');
-const graphqlHttp = require('express-graphql');
+const {graphqlHTTP } = require('express-graphql');
 
 const graphqlSchema = require('./graphql/schema');
 const graphqlResolver = require('./graphql/resolvers');
@@ -73,7 +73,7 @@ app.put('/post-image', (req, res, next) => {
 
 app.use(
   '/graphql',
-  graphqlHttp({
+  graphqlHTTP ({
     schema: graphqlSchema,
     rootValue: graphqlResolver,
     graphiql: true,
@@ -99,8 +99,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    'mongodb+srv://maximilian:9u4biljMQc4jjqbe@cluster0-ntrwp.mongodb.net/messages?retryWrites=true'
-  )
+    'mongodb+srv://Tharun:MongoDBPractice@cluster0.foxt3.mongodb.net/')
   .then(result => {
     app.listen(8080);
   })
